@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* header */
+header { 
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    padding-top:3rem;
+    box-sizing: border-box;
+}
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    width:70%;
+    margin: 0 auto;
+}
+.headerInner nav ul {
+    display: flex;
+    gap: 5rem;
+}
+
+/* main */
+.pageArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height: 100vh;
+}
+.mainTxt {
+    margin-right: 12rem;
+    color: #333;
+    font-family: 'S-CoreDream-3Light';
+}
+.mainTxt h2 {
+    font-size: 3.2rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+.mainTxt h2 span{
+    color: #fda29f;
+}
+.mainTxt h3 {
+    font-size: 2rem;
+    line-height: 1.7;
+    letter-spacing: -0.2px;
+}
+.imgArea {
+    position: relative;
+}
+.mainImg,.imgModel {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 89% 11% 23% 77% / 76% 30% 70% 24%;
+}
+.mainImg {
+    background-image: url(../../public/img/hyejin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imgModel {
+    background-color:#FEF7F7;
+    position: absolute;
+    left: 10%;
+    top: 6%;
+    z-index: -1;
+}
+
+/* about */
+.aboutImg {
+    width: 200px;
+    height: 200px;
+    background-image: url(../../public/img/hyejin_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.aboutList li{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'S-CoreDream-3Light';
+}
+.aboutList img {
+    width: 2rem;
+}
+
+/* 공통 사용 */
+.pinkBtn {
+    display: inline-block;
+    background: linear-gradient(-45deg, #faaaac, #f97889, #fbaeb8, #faaaac);
+    background-size: 400% 400%;
+    padding: 1.2rem 1.5rem;
+    border-radius: 2.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 1.8rem;
+}
+.pinkBtn:hover { 
+    animation: gradient .4s ease both;
+}
+
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+    100% {
+    background-position: 100% 50%;
+    }
+}
