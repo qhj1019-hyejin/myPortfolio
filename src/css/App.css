@@ -5,6 +5,36 @@
     font-style: normal;
 }
 
+/* 공통 사용 */
+:root {
+    --main-color: #fda29f;
+}
+
+.pinkBtn {
+    display: inline-block;
+    background: linear-gradient(-45deg, #faaaac, #f97889, #fbaeb8, #faaaac);
+    background-size: 400% 400%;
+    padding: 1.2rem 1.5rem;
+    border-radius: 2.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 1.8rem;
+}
+.pinkBtn:hover { 
+    animation: gradient .4s ease both;
+}
+
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+    100% {
+    background-position: 100% 50%;
+    }
+}
+
 /* header */
 header { 
     width: 100%;
@@ -44,7 +74,7 @@ header {
     margin-bottom: 2rem;
 }
 .mainTxt h2 span{
-    color: #fda29f;
+    color: var(--main-color);
 }
 .mainTxt h3 {
     font-size: 2rem;
@@ -74,46 +104,75 @@ header {
 }
 
 /* about */
-.aboutImg {
+.leftBox {
+    margin-right: 8rem;
+}
+.leftBox .aboutImg {
     width: 200px;
     height: 200px;
     background-image: url(../../public/img/hyejin_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+    margin-bottom: 3rem;
 }
-.aboutList li{
+.leftBox .aboutList li {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'S-CoreDream-3Light';
+    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--main-color);
+    padding-bottom: 1rem;
 }
-.aboutList img {
-    width: 2rem;
+.leftBox .aboutList li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.leftBox .aboutList img {
+    width: 1.8rem;
+    margin-right: 0.5rem;
 }
 
-/* 공통 사용 */
-.pinkBtn {
-    display: inline-block;
-    background: linear-gradient(-45deg, #faaaac, #f97889, #fbaeb8, #faaaac);
-    background-size: 400% 400%;
-    padding: 1.2rem 1.5rem;
-    border-radius: 2.5rem;
-    font-family: 'Noto Sans', sans-serif;
+.rightBox {
+    width: 25%;
+}
+.rightBox h3 {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.rightBox ul {
+    width: 80%;
+}
+.rightBox ul li {
+    margin-bottom: 2rem;
+}
+.rightBox .skillTxt {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.rightBox .levelBox {
+    width: 100%;
+    display: block;
+    background-color: rgb(195 194 194);
+    height: 2px;
+    margin-top: 1rem;
+}
+.rightBox .levelChk {
+    background-color: var(--main-color);
+    height: 100%;
+}
+
+.aboutTxt {
+    width: 25%;
+    margin-bottom: 3rem;
     font-size: 1.6rem;
-    font-weight: 300;
-    color: #fff;
-    margin-top: 1.8rem;
-}
-.pinkBtn:hover { 
-    animation: gradient .4s ease both;
+    line-height: 1.7;
+    font-family: 'S-CoreDream-3Light';
+    color: #333;
 }
 
-@keyframes gradient {
-    0% {
-    background-position: 0% 50%;
-    }
-    100% {
-    background-position: 100% 50%;
-    }
-}
