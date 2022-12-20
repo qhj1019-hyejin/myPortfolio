@@ -36,15 +36,15 @@ const About = (props) => {
                     </li>
                     <li>
                         <img src="img/phone_icon.png"/>
-                        <h2>010 3152 3026</h2>
+                        <h2><a href="tel:010-3152-3026">010 3152 3026</a></h2>
                     </li>
                     <li>
                         <img src="img/github2.png" style={{filter: 'brightness(0.3)'}}/>
-                        <h2>github.com/qhj1019-hyejin</h2>
+                        <h2><a href="https://github.com/qhj1019-hyejin" target={"_blank"}>github.com/qhj1019-hyejin</a></h2>
                     </li>
                     <li>
                         <img src="img/mail_icon.png" style={{filter: 'contrast(0.6)'}}/>
-                        <h2>qhj1019@naver.com</h2>
+                        <h2><a href="mailto:qhj1019@naver.com">qhj1019@naver.com</a></h2>
                     </li>
                 </ul>
             </div>

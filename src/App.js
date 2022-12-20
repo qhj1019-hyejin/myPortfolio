@@ -5,6 +5,8 @@ import './css/reset.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Main from './components/main';
 import About from './components/about';
+import Project from './components/project';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
-                <li><a>Project</a></li>
-                <li><a>Contact</a></li>
+                <li><Link to="/project">Project</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
           </div>
@@ -26,6 +28,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/project" element={<Project/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </div>
     </BrowserRouter>
