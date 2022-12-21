@@ -31,25 +31,25 @@ const About = (props) => {
                 <div className="aboutImg"></div>
                 <ul className="aboutList">
                     <li>
-                        <img src="img/name_icon.png"/>
+                        <img src="img/name_icon.png" alt="name icon"/>
                         <h2>박혜진</h2>
                     </li>
                     <li>
-                        <img src="img/phone_icon.png"/>
+                        <img src="img/phone_icon.png" alt="phone icon"/>
                         <h2><a href="tel:010-3152-3026">010 3152 3026</a></h2>
                     </li>
                     <li>
-                        <img src="img/github2.png" style={{filter: 'brightness(0.3)'}}/>
+                        <img src="img/github2.png" style={{filter: 'brightness(0.3)'}} alt="github icon"/>
                         <h2><a href="https://github.com/qhj1019-hyejin" target={"_blank"}>github.com/qhj1019-hyejin</a></h2>
                     </li>
                     <li>
-                        <img src="img/mail_icon.png" style={{filter: 'contrast(0.6)'}}/>
+                        <img src="img/mail_icon.png" style={{filter: 'contrast(0.6)'}} alt="mail icon"/>
                         <h2><a href="mailto:qhj1019@naver.com">qhj1019@naver.com</a></h2>
                     </li>
                 </ul>
             </div>
             <div className="rightBox">
-                <h3>Skills</h3>
+                <h3 className="tlt">Skills</h3>
                 <ul>
                     {skillList}
                 </ul>

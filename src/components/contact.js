@@ -20,17 +20,36 @@ const Contact = (props) => {
 
     return (
         <div className="pageArea contact">
-            <form ref={form} onSubmit={sendEmail}>
-                <label>Name</label>
-                <input type="text" name="name" />
-                <label>Phone</label>
-                <input type="text" name="phone" />
-                <label>Email</label>
-                <input type="email" name="email" />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
-            </form>
+            <div className="inner">
+                <h2 className="tlt">Get in Touch</h2>
+                <ul className="aboutBox">
+                    <li>
+                        <a href="https://goo.gl/maps/PdbzQkf3Y1yosvUBA" target={"_blank"}>
+                        <img src="img/map_icon.png" alt="map icon"/>
+                        <h3>gimpo, Republic of Korea</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:010-3152-3026">
+                            <img src="img/phone_icon2.png" alt="phone icon"/>
+                            <h2>010 3152 3026</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:qhj1019@naver.com">
+                            <img src="img/mail_icon.png" alt="mail icon"/>
+                            <h2>qhj1019@naver.com</h2>
+                        </a>
+                    </li>
+                </ul>
+                <form ref={form} onSubmit={sendEmail}>
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="text" name="phone" placeholder="Phone"/>
+                    <input type="email" name="email" className="fullInput" placeholder="Email"/>
+                    <textarea name="message" className="fullInput" placeholder="Message"/>
+                    <input type="submit" className="pinkBtn" value="Send"/>
+                </form>
+            </div>
         </div>
     )
 }
