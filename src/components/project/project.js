@@ -1,3 +1,5 @@
+import style from './Project.module.css';
+
 const Project = (props) => {
     return (
         <div className="pageArea project">

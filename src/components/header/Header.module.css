@@ -1,0 +1,26 @@
+header { 
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    padding-top:3rem;
+    box-sizing: border-box;
+}
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    width:70%;
+    margin: 0 auto;
+}
+.headerInner nav ul {
+    display: flex;
+    gap: 5rem;
+}
+.headerInner nav ul li {
+    font-size: 1.6rem;
+    color: #333;
+}
+.headerInner nav ul li:hover {
+    color: var(--main-color);
+    transition: .2s;
+}
