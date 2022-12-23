@@ -11,7 +11,7 @@ const About = (props) => {
         { name: 'Jquery' , pct : '100%' },
         { name: 'Php' , pct : '95%' },
         { name: 'Mysql' , pct : '90%' },
-        { name: 'React' , pct : '70%' }
+        { name: 'React.js' , pct : '80%' }
     ])
 
     const skillList = skill.map(e => (
@@ -27,7 +27,7 @@ const About = (props) => {
     ))
 
     return (
-        <div className="pageArea about">
+        <div className="pageArea">
             <div className={style.leftBox}>
                 <div className={style.aboutImg} style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hyejin_2.jpg'})` }}></div>
                 <ul className={style.aboutList}>
@@ -56,8 +56,11 @@ const About = (props) => {
                 </ul>
             </div>
             <div className={style.aboutTxt}>
-                로렘 입숨(Lorem Ipsum)이라고 들어보셨나요? 로렘 입숨은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트입니다. 최종 결과물에 들어가는 실제 문장 내용이 채워지기 전에 디자인 프로젝트 모형의 채움 글로도 이용됩니다.
-                로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 하지만 그 이상의 의미를 담지는 않습니다. 문서에서 텍스트가 보이면 사람들은 전체적인 모양새보다는 텍스트에 담긴 뜻에 집중하는 경향이 있어서 서체나 디자인을 보일 때 로렘 입숨을 사용합니다. (출처: 위키백과)
+                스킬 90% 이상은 실무에서 사용해봤기 때문에 어느정도 자신있게 할 수 있다고 생각 합니다.
+                react.js는 실무에서는 사용해보지 않았지만 독학으로 공부하고 프로젝트 등을 만들어 봤기 때문에 70%로 정했었습니다.
+                80%로 변경한 이유는 지금 보시고 계시는 포트폴리오를 react.js로 작업하면서 더 많은것을 찾아보고 배우게 되어서 조금 더 실무에서
+                사용할 때 도움되는 공부를 했다고 생각해서 높혔습니다.<br/>
+                적응력과 이해력이 높은 편이여서 처음 공부해보는 스킬도 곧잘 익혀서 실무에서 빠르게 사용합니다. 
             </div>
         </div>
     )

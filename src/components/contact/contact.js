@@ -6,23 +6,27 @@ import emailjs from '@emailjs/browser';
 const Contact = (props) => {
 
     const { register,  handleSubmit, formState: { isSubmitting, isDirty, errors } } = useForm();
+
     const form = useRef();
 
     const sendEmail = (e) => {
-    //   e.preventDefault();
+      e.preventDefault();
   
       emailjs.sendForm('service_2rb868j', 'template_l8odtoi', form.current, 'AxBNdASCBrusPDrKr')
         .then((result) => {
             alert('전송 되었습니다.');
-            console.log(result.text);
         }, (error) => {
             alert('전송에 실패했습니다.');
             console.log(error.text);
         });
     };
 
+    const onReset = (e) => {
+        
+    };
+
     return (
-        <div className={`${style.contact} pageArea` }>
+        <div className={`pageArea ${style.contact}` }>
             <div className="inner">
                 <h2 className="tlt">Get in Touch</h2>
                 <ul className={style.aboutBox}>

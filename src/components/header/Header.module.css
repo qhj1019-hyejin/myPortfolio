@@ -4,6 +4,7 @@ header {
     background-color: transparent;
     padding-top:3rem;
     box-sizing: border-box;
+    z-index: 99;
 }
 .headerInner {
     display: flex;
