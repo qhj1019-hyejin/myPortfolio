@@ -14,6 +14,7 @@
     text-align: center;
     color: var(--main-color);
     line-height: 1.8;
+    background-color:#fff;
 }
 .contact .aboutBox li:hover {
     background-color: var(--main-color);

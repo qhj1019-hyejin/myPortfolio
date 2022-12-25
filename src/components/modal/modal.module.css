@@ -1,0 +1,24 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.modalInner {
+    width: 45%;
+    background-color: #fff;
+    height: 50rem;
+}
+
+
+.close {
+    height: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.close img {
+    height: 100%;
+    cursor: pointer;
+}

@@ -3,16 +3,20 @@
 import './reset.css';
 import './common.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 import Header from './components/header/header';
 import Main from './components/main/main';
 import About from './components/about/about';
 import Project from './components/project/project';
 import Contact from './components/contact/contact';
+import Particle from './components/particles';
 
 function App() {
+
   return (
     <BrowserRouter>
-      <div className="App">
+      <Particle/>
+      <div className="App" >
         <Header/>
         <Routes>
           <Route path="/" element={<Main/>} />
