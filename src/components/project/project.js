@@ -3,30 +3,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
 const Project = (props) => {
 
-    const weekArr = ["MON", "TUE", "WED", "THU", "FRI"];
+    const projectNum = ["igisWeb", "igisWebzine", "fundSys", "managerPage", "myportfolio"];
 
     return (
         <div className={`pageArea ${style.project}` }>
             <h2 className="tlt" >My project</h2>
-            <h3>&laquo; slide</h3>
+            <div className={style.slide} >
+                <ul>
+                    <li className={style.scrollArrow}></li>
+                    <li className={style.scrollArrow}></li>
+                    <li className={style.scrollArrow}></li>
+                </ul>
+                <h3>slide</h3>
+            </div>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
                 pagination={{
-                  clickable: true,
+                    type: "progressbar",
+                    clickable: true,
                 }}
-                modules={[Pagination]}
+                navigation={true}
+                modules={[Pagination, Navigation]}
                 className={style.swiper}
             >
-                {weekArr.map((week, index) => (
+                {projectNum.map((tlt, index) => (
                     <SwiperSlide 
                         className={style.swiperSlide}
-                        key={index}
+                        key={tlt}
                         style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/project_img_'+( index + 1 )+'.png'})` }}
                     >
                     </SwiperSlide>

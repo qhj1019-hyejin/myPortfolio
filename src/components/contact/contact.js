@@ -1,5 +1,5 @@
 import style from './Contact.module.css';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
@@ -10,7 +10,7 @@ const Contact = (props) => {
     const form = useRef();
 
     const sendEmail = (e) => {
-      e.preventDefault();
+    //   e.preventDefault();
   
       emailjs.sendForm('service_2rb868j', 'template_l8odtoi', form.current, 'AxBNdASCBrusPDrKr')
         .then((result) => {
@@ -19,10 +19,6 @@ const Contact = (props) => {
             alert('전송에 실패했습니다.');
             console.log(error.text);
         });
-    };
-
-    const onReset = (e) => {
-        
     };
 
     return (
@@ -50,8 +46,19 @@ const Contact = (props) => {
                     </li>
                 </ul>
                 <form ref={form} onSubmit={handleSubmit(sendEmail)}>
-                    <input type="text" name="name" placeholder="Name" />
-                    <input type="text" name="phone" placeholder="Phone"/>
+                    <small role="alert" className="errToast">{errors.name?.message || errors.phone?.message || errors.email?.message || errors.message?.message }</small>
+                    <input 
+                        type="text"
+                        name="name"
+                        placeholder="Name" 
+                        {...register("name", { required: "이름 필수 입력값 입니다." })}
+                    />
+                    <input 
+                        type="text"
+                        name="phone"
+                        placeholder="Phone"
+                        {...register("phone", { required: "번호 필수 입력값 입니다." })}
+                    />
                     <input 
                         type="email"
                         name="email"
@@ -66,9 +73,19 @@ const Contact = (props) => {
                           },
                         })}
                     />
-                    {errors.email && <small role="alert" className="errAlert">{errors.email.message}</small>}
-                    <textarea name="message" className={style.fullInput} placeholder="Message"/>
-                    <input type="submit" className="pinkBtn" value="Send"/>
+                    <textarea 
+                        name="message"
+                        className={style.fullInput}
+                        placeholder="Message"
+                        {...register("message", {
+                            required: "내용을 입력해주세요.",
+                            minLength: {
+                                message: "5글자 이상 입력하세요.",
+                                value: 5,
+                            },
+                        })}
+                    />
+                    <input type="submit" className="pinkBtn" value="Send" disabled={isSubmitting} />
                 </form>
             </div>
         </div>
