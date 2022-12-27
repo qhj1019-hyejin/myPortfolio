@@ -8,7 +8,7 @@
 .modalInner {
     width: 40%;
     background-color: #fff;
-    height: 50rem;
+    height: 45rem;
     position: relative;
     overflow: hidden;
 }
@@ -36,12 +36,22 @@
     height: 100%;
 }
 .contenWrap .rightInner {
-    width: 45%;
+    width: 48%;
     height: 100%;
     padding: 3rem 2rem;
     font-family: 'S-CoreDream-3Light';
+    color: #3e3e3e;
 }
 .contenWrap .rightInner h3 {
     font-size: 2.4rem;
     font-weight: bold;
+    margin-bottom: 2rem;
+}
+.contenWrap .rightInner h4 {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+.contenWrap .rightInner p {
+    font-size: 1.6rem;
+    line-height: 1.8;
 }

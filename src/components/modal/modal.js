@@ -1,11 +1,13 @@
 import style from './modal.module.css';
+import { useState } from 'react';
 
 const Modal = (props) => {
 
     const closeModal = () => {
         props.setModalOpen(false);
-        console.log('idxProp::',props.idxProp);
     }
+    
+    let [hrefCheck, setHrefCheck] = useState();
 
     return (
         <div  className={`pageArea ${style.modal}`} >
@@ -18,8 +20,8 @@ const Modal = (props) => {
                         <img src={'/project_img_'+ (props.idxProp + 1) +'.png'} />
                     </div>
                     <div className={style.rightInner}>
-                    <h3>{props.portfolioLi[props.idxProp].title}</h3>
-                        <p>{props.portfolioLi[props.idxProp].skill}</p>
+                        <h3>{props.portfolioLi[props.idxProp].title}</h3>
+                        <h4>{props.portfolioLi[props.idxProp].skill}</h4>
                         <p>{props.portfolioLi[props.idxProp].content}</p>
                     </div>
                 </div>
