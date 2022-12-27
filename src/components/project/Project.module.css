@@ -69,6 +69,7 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    cursor: pointer;
 }
 .swiperSlide:hover {
     animation: backImgHover .3s both;

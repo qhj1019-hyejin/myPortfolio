@@ -1,5 +1,6 @@
 export default [
     {
+        id : 0,
         title : "Igis 홈페이지",
         skill : "php, html, css, javascript, jquery, mysql",
         content : 
@@ -7,6 +8,7 @@ export default [
     },
 
     {
+        id : 1,
         title : "Webzine",
         skill : "php, html, css, javascript, jquery, mysql",
         content : 
@@ -14,6 +16,7 @@ export default [
     },
 
     {
+        id : 2,
         title : "펀드업무 시스템",
         skill : "websquare(framework)/ javascript, mysql",
         content : 
@@ -21,6 +24,7 @@ export default [
     },
 
     {
+        id : 3,
         title : "관리자 페이지",
         skill : "php, html, css, javascript, jquery, mysql",
         content : 
@@ -28,6 +32,7 @@ export default [
     },
 
     {
+        id : 4,
         title : "포트폴리오",
         skill : "react.js , css, netlify",
         content : 

@@ -4,6 +4,7 @@ const Modal = (props) => {
 
     const closeModal = () => {
         props.setModalOpen(false);
+        console.log('idxProp::',props.idxProp);
     }
 
     return (
@@ -12,9 +13,16 @@ const Modal = (props) => {
                 <div className={style.close} >
                     <img src="/close_icon.png" alt="닫기" onClick={closeModal} />
                 </div>
-                <h4>{props.portfolioLi[0].title}</h4>
-                <p>{props.portfolioLi[0].skill}</p>
-                <p>{props.portfolioLi[0].content}</p>
+                <div className={style.contenWrap}>
+                    <div className={style.leftInner}>
+                        <img src={'/project_img_'+ (props.idxProp + 1) +'.png'} />
+                    </div>
+                    <div className={style.rightInner}>
+                    <h3>{props.portfolioLi[props.idxProp].title}</h3>
+                        <p>{props.portfolioLi[props.idxProp].skill}</p>
+                        <p>{props.portfolioLi[props.idxProp].content}</p>
+                    </div>
+                </div>
             </div>
         </div>
     )
