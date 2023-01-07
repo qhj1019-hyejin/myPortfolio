@@ -6,7 +6,7 @@ const header = (props) => {
         <header>
           <div className={style.headerInner}>
             <h1>I'm hyejin</h1>
-            <nav>
+            <nav className="pc" >
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
@@ -14,6 +14,12 @@ const header = (props) => {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
+            <div className={`mobile ${style.menu}` }>
+            {/* <span className={style.burgur}>
+              <span className={style.topLine}></span>
+              <span className={style.botLine}></span>
+            </span> */}
+            </div>
           </div>
         </header>
     )

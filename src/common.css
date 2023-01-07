@@ -53,3 +53,12 @@
     width: 50%;
 }
 
+.mobile {
+    display: none;
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+    .pc { display: none; }
+    .mobile { display:block; }
+}

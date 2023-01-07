@@ -20,8 +20,8 @@
     position: relative;
 }
 .mainImg,.imgModel {
-    width: 400px;
-    height: 500px;
+    width: 40rem;
+    height: 50rem;
     overflow: hidden;
     border-radius: 89% 11% 23% 77% / 76% 30% 70% 24%;
 }
@@ -36,4 +36,14 @@
     left: 10%;
     top: 6%;
     z-index: -1;
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+    .mainTxt {
+        margin-right: 0;
+    }
 }

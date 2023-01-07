@@ -3,7 +3,7 @@ import style from './Main.module.css';
 
 const Main = (props) => {
 	return (
-		<div className="pageArea">
+		<div className={`pageArea ${style.main}` } >
             <div className={style.mainTxt}>
             <h2>안녕하세요.<br/>신입 웹 개발자 <span>박혜진</span>입니다.</h2>
             <h3>
