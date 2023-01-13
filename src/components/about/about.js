@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from './About.module.css';
+import { CSSTransition } from "react-transition-group";
 
 const About = (props) => {
 

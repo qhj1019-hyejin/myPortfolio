@@ -15,10 +15,15 @@
     color:#333;
     font-size: 1.8rem;
     font-family: 'S-CoreDream-3Light';
+    font-weight: normal;
     margin-bottom: 1.2rem;
     margin-bottom: 1.5rem;
     border-bottom: 1px dashed var(--main-color);
     padding-bottom: 1rem;
+}
+.leftBox .aboutList li a:hover {
+    color: var(--main-color);
+    transition: .1s;
 }
 .leftBox .aboutList li:last-child {
     padding-bottom: 0;

@@ -45,8 +45,8 @@ const Project = (props) => {
                     type: "progressbar",
                     clickable: true,
                 }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
+                navigation={false}
+                // modules={[Pagination, Navigation]}
                 className={style.swiper}
             >
                 {portfolioLi.map((item, idx) => (

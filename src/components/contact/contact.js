@@ -9,6 +9,7 @@ const Contact = (props) => {
 
     const form = useRef();
 
+    // 전송 후 text 
     const sendEmail = (e) => {
     //   e.preventDefault();
   
