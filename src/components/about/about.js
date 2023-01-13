@@ -28,7 +28,7 @@ const About = (props) => {
     ))
 
     return (
-        <div className="pageArea">
+        <div className={`pageArea ${style.aboutWrap}`}>
             <div className={style.leftBox}>
                 <div className={style.aboutImg} style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hyejin_2.jpg'})` }}></div>
                 <ul className={style.aboutList}>
