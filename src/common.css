@@ -62,3 +62,9 @@
     .pc { display: none; }
     .mobile { display:block; }
 }
+
+@media screen and (max-width: 360px) {
+    .pinkBtn {
+        font-size: 1.4rem;
+    }
+}

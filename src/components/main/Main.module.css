@@ -62,3 +62,19 @@
         font-size: 1.8rem;
     }
 }
+
+@media screen and (max-width: 360px) {
+    .mainImg,.imgModel {
+        width: 28rem;
+        height: 35rem;
+    }
+    .mainTxt h2 {
+        font-size: 2.4rem;
+    }
+    .mainTxt h3 {
+        font-size: 1.6rem;
+    }
+    .imgArea {
+        margin:3rem 0;
+    }
+}

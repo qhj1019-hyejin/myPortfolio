@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import style from './Header.module.css';
+import mobileMenu from "./mobileMenu";
 
 const header = (props) => {
     return (
@@ -14,7 +15,7 @@ const header = (props) => {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
-            <div className={`mobile ${style.menu}` }>
+            <div className={`mobile ${style.menu}` } onClick={ (e)=>{console.log('기다려봐')} }>
               <span className={style.burgur}>
                 <span className={style.topLine}></span>
                 <span className={style.botLine}></span>
