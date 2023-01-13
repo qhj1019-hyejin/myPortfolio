@@ -45,5 +45,20 @@
     }
     .mainTxt {
         margin-right: 0;
+        padding: 0 2rem;
+    }
+    .imgArea {
+        margin-bottom: 3rem;
+    }
+
+    .mainImg,.imgModel {
+        width: 30rem;
+        height: 40rem;
+    }
+    .mainTxt h2 {
+        font-size: 2.6rem;
+    }
+    .mainTxt h3 {
+        font-size: 1.8rem;
     }
 }
