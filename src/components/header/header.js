@@ -3,10 +3,11 @@ import style from './Header.module.css';
 import mobileMenu from "./mobileMenu";
 
 const header = (props) => {
+
     return (
         <header>
           <div className={style.headerInner}>
-            <h1>I'm hyejin</h1>
+            <h1><Link to="/">I'm hyejin</Link></h1>
             <nav className="pc">
               <ul>
                 <li><Link to="/">Home</Link></li>

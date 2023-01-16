@@ -61,6 +61,9 @@
 @media screen and (max-width: 768px) {
     .pc { display: none; }
     .mobile { display:block; }
+
+    .tlt { font-size: 3rem;}
+
 }
 
 @media screen and (max-width: 360px) {
