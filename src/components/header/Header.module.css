@@ -31,6 +31,7 @@ header {
     header {
         padding: 1rem 2rem;
         background-color:#fff;
+        box-shadow: 2px 0px 5px grey;
     }
     .headerInner {
         width: 100%;
@@ -64,5 +65,23 @@ header {
     }
     .burgur .botLine {
         top: -8px;
+    }
+
+    .mobileMenu {
+        padding-top: 1rem;
+        color: #565656;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .mobileMenu li {
+        margin-bottom: 1rem;
+    }
+
+    .showMenu {
+
+    }
+
+    .hideMenu {
+        
     }
 }

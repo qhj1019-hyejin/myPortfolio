@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import style from './Header.module.css';
-import mobileMenu from "./mobileMenu";
+import MobileMenu from "./mobileMenu";
+import { useState } from "react";
 
-const header = (props) => {
+const Header = (props) => {
 
-    return (
-        <header>
-          <div className={style.headerInner}>
-            <h1><Link to="/">I'm hyejin</Link></h1>
+  const [mobileMenu, setMobileMenu] = useState(false);  // 모바일 메뉴 초기값 false
+
+  const toggleMenu  = () => {
+    setMobileMenu(mobileMenu => !mobileMenu); // on , off
+  }
+
+  return (
+      <header className={mobileMenu ? "shadowOn" : "shadowOff"} >
+        <div className={style.headerInner}>
+          <h1><Link to="/">I'm hyejin</Link></h1>
             <nav className="pc">
               <ul>
                 <li><Link to="/">Home</Link></li>
@@ -16,14 +23,17 @@ const header = (props) => {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
-            <div className={`mobile ${style.menu}` } onClick={ (e)=>{console.log('기다려봐')} }>
+            <div className={`mobile ${style.menu}` } onClick={()=>toggleMenu()} >
               <span className={style.burgur}>
                 <span className={style.topLine}></span>
                 <span className={style.botLine}></span>
               </span>
             </div>
-          </div>
-        </header>
-    )
+        </div>
+        {
+          mobileMenu == true ? <MobileMenu mobileMenu={mobileMenu} /> : null // 모달 팝업
+        }
+      </header>
+  )
 }
-export default header;
+export default Header;

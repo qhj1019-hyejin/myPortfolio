@@ -57,12 +57,26 @@
     display: none;
 }
 
+/* 태블릿 */
+@media screen and (max-width: 1080px) {
+    .inner { width: 80%; }
+}
+
 /* 모바일 */
 @media screen and (max-width: 768px) {
     .pc { display: none; }
     .mobile { display:block; }
 
     .tlt { font-size: 3rem;}
+
+    .inner { width: 90%; }
+
+    .shadowOn {
+        box-shadow: 2px 0px 5px grey;
+    }
+    .shadowOff {
+        box-shadow: none;
+    }
 
 }
 

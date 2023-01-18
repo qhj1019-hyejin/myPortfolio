@@ -80,3 +80,35 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     box-shadow: 0 0 0px 1000px #f3f3f3 inset;
 }
+
+/* 태블릿 */
+@media screen and (max-width: 1080px) {
+    .contact form input {
+        width: 100%;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-top: 7rem;
+    }
+    .contact .aboutBox {
+        flex-direction: column;
+    }
+    .contact .aboutBox li {
+        width: 100%;
+    }
+    .contact form input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .contact {
+        padding-top: 12rem;
+    }
+    .contact form input[type="submit"]{
+        margin-bottom: 2rem;
+    }
+}
