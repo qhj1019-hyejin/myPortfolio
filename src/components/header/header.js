@@ -23,11 +23,10 @@ const Header = (props) => {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
-            <div className={`mobile ${style.menu}` } onClick={()=>toggleMenu()} >
-              <span className={style.burgur}>
-                <span className={style.topLine}></span>
-                <span className={style.botLine}></span>
-              </span>
+            <div className={`mobile ${style.menu} ${mobileMenu ? "mobileMenuOff" : ""} `} onClick={()=>toggleMenu()} >
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
         </div>
         {

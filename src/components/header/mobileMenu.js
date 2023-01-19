@@ -5,7 +5,7 @@ import { useState } from 'react';
 const MobileMenu = (props) => {
 
     return (
-        <div className={props.mobileMenu ? "show-menu" : "hide-menu"}>
+        <div className={props.mobileMenu ? "showMenu" : "hideMenu"}>
             <nav className={style.mobileMenu}>
               <ul>
                 <li><Link to="/">Home</Link></li>

@@ -106,7 +106,7 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width: 360px) {
     .contact {
-        padding-top: 12rem;
+        padding-top: 15rem;
     }
     .contact form input[type="submit"]{
         margin-bottom: 2rem;
