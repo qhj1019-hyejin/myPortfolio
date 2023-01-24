@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import style from './Header.module.css';
 import MobileMenu from "./mobileMenu";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 
 const Header = (props) => {
 
   const [mobileMenu, setMobileMenu] = useState(false);  // 모바일 메뉴 초기값 false
+  const { pathname } = useLocation();
+
+  // url 변경 시 모바일 메뉴 닫기
+  useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
 
   const toggleMenu  = () => {
     setMobileMenu(mobileMenu => !mobileMenu); // on , off
@@ -30,7 +37,7 @@ const Header = (props) => {
             </div>
         </div>
         {
-          mobileMenu == true ? <MobileMenu mobileMenu={mobileMenu} /> : null // 모달 팝업
+          mobileMenu == true ? <MobileMenu mobileMenu={mobileMenu} /> : null // 모바일 메뉴
         }
       </header>
   )
