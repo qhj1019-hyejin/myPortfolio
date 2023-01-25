@@ -39,14 +39,12 @@ const Project = (props) => {
                 <h3>slide</h3>
             </div>
             <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
+            slidesPerView={"auto"}
+                spaceBetween={30}
                 pagination={{
-                    type: "progressbar",
-                    clickable: true,
+                  clickable: true,
                 }}
-                navigation={false}
-                // modules={[Pagination, Navigation]}
+                modules={[Pagination]}
                 className={style.swiper}
             >
                 {portfolioLi.map((item, idx) => (

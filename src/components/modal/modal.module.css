@@ -62,6 +62,9 @@
         width: 85%; 
         height: auto;
     }
+    .close {
+        height: 1.5rem;
+    }
     .contenWrap .rightInner h3 {
         font-size: 2rem;
     }
