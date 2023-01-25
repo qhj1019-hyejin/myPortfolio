@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import style from './Project.module.css';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 import portfolioList from './portfolioList';
 import Modal from '../modal/modal';
 
@@ -28,7 +29,12 @@ const Project = (props) => {
 
 
     return (
-        <div className={`pageArea ${style.project}` }>
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`pageArea ${style.project}` }
+        >
             <h2 className="tlt">My project</h2>
             <div className={style.slide} >
                 <ul>
@@ -62,7 +68,7 @@ const Project = (props) => {
                 modalOpen == true ? <Modal setModalOpen={setModalOpen} portfolioLi={portfolioLi} idxProp={idxProp} /> : null // 모달 팝업
              }      
 
-        </div>
+        </motion.div>
     )
 }
 export default Project;

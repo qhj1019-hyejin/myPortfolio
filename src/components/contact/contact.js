@@ -2,6 +2,7 @@ import style from './Contact.module.css';
 import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion";
 
 const Contact = (props) => {
 
@@ -23,7 +24,12 @@ const Contact = (props) => {
     };
 
     return (
-        <div className={`pageArea ${style.contact}` }>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`pageArea ${style.contact}` }
+        >
             <div className="inner">
                 <h2 className="tlt">Get in Touch</h2>
                 <ul className={style.aboutBox}>
@@ -89,7 +95,7 @@ const Contact = (props) => {
                     <input type="submit" className="pinkBtn" value="Send" disabled={isSubmitting} />
                 </form>
             </div>
-        </div>
+        </motion.div>
     )
 }
 export default Contact;

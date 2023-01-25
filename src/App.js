@@ -2,7 +2,7 @@
 
 import './reset.css';
 import './common.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/header';
 import Main from './components/main/main';
@@ -19,7 +19,7 @@ function App() {
       <div className="App" >
         <Header/>
         <Routes>
-          <Route path="/" element={<Main/>} />
+          <Route exact  path="/" element={<Main/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/project" element={<Project/>} />
           <Route path="/contact" element={<Contact/>} />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from './About.module.css';
-import { CSSTransition } from "react-transition-group";
+import { motion } from "framer-motion";
 
 const About = (props) => {
 
@@ -28,9 +28,23 @@ const About = (props) => {
     ))
 
     return (
-        <div className={`pageArea ${style.aboutWrap}`}>
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`pageArea ${style.aboutWrap}`}
+        >
             <div className={style.leftBox}>
-                <div className={style.aboutImg} style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hyejin_2.jpg'})` }}></div>
+                <motion.div 
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1, rotateZ: 360 }}
+                    transition={{
+                        duration: 0.9,
+                        ease: [0, 0.71, 0.2, 1.01]
+                    }}
+                    className={style.aboutImg} 
+                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hyejin_2.jpg'})` }}
+                />
                 <ul className={style.aboutList}>
                     <li>
                         <img src="/name_icon.png" alt="name icon"/>
@@ -63,7 +77,7 @@ const About = (props) => {
                 사용할 때 도움되는 공부를 했다고 생각해서 높혔습니다.<br/>
                 적응력과 이해력이 높은 편이여서 처음 공부해보는 스킬도 곧잘 익혀서 실무에서 빠르게 사용합니다. 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -61,6 +61,8 @@
     .modalInner {
         width: 85%; 
         height: auto;
+        max-height: 50rem;
+        overflow-y: auto;
     }
     .close {
         height: 1.5rem;
