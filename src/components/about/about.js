@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import style from './About.module.css';
 import { motion } from "framer-motion";
 
@@ -6,24 +6,22 @@ const About = (props) => {
 
     /* rightBox skills 리스트 */
     const [skill, setSkill] = useState([
-        { name: 'Html' , pct : '100%' },
-        { name: 'Css' , pct : '95%' },
-        { name: 'Javascript' , pct : '95%' },
-        { name: 'Jquery' , pct : '100%' },
-        { name: 'Php' , pct : '95%' },
-        { name: 'Mysql' , pct : '90%' },
-        { name: 'React.js' , pct : '80%' }
+        { name: 'Html' , pct : '100' },
+        { name: 'Css' , pct : '95' },
+        { name: 'Javascript' , pct : '95' },
+        { name: 'Jquery' , pct : '100' },
+        { name: 'Php' , pct : '95' },
+        { name: 'Mysql' , pct : '90' },
+        { name: 'React.js' , pct : '80' }
     ])
 
     const skillList = skill.map(e => (
         <li key={e.name}>
             <div className={style.skillTxt}>
                 <span>{e.name}</span>
-                <span>{e.pct}</span>
+                <span>{e.pct}%</span>
             </div>
-            <div className={style.levelBox}>
-                <div className={style.levelChk} style={{width:e.pct}}></div>
-            </div>
+            <progress value={e.pct} max="100" />
         </li>
     ))
 

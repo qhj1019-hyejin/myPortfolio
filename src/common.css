@@ -19,8 +19,7 @@
 
 .pinkBtn {
     display: inline-block;
-    background-color: #f5e5e5;
-    background-image: linear-gradient(315deg, #f5e5e5 0%, #fda29f 74%);
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
     background-size: 400% 400%;
     padding: 1.2rem 1.8rem;
     border-radius: 2.5rem;
@@ -29,17 +28,10 @@
     font-weight: 300;
     color: #fff;
     margin-top: 1.8rem;
+    transition: .3s;
 }
-.pinkBtn:hover { 
-    animation: gradient .4s ease both;
-}
-@keyframes gradient {
-    0% {
-    background-position: 0% 50%;
-    }
-    100% {
-    background-position: 100% 50%;
-    }
+.pinkBtn:hover {
+    background-position: right center;
 }
 
 .tlt {

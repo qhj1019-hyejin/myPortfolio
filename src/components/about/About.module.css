@@ -49,16 +49,19 @@
     justify-content: space-between;
     font-size: 1.5rem;
 }
-.rightBox .levelBox {
+.rightBox progress {
     width: 100%;
-    display: block;
-    background-color: rgb(195 194 194);
-    height: 2px;
-    margin-top: 1rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    -webkit-appearance: none;
 }
-.rightBox .levelChk {
+.rightBox progress::-webkit-progress-bar {
+    background-color: rgb(233, 233, 233);
+    border-radius: 2rem;
+}
+.rightBox progress::-webkit-progress-value {
     background-color: var(--main-color);
-    height: 100%;
+    border-radius: 2rem;
 }
 
 .aboutTxt {
