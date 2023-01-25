@@ -7,7 +7,7 @@ const Modal = (props) => {
         props.setModalOpen(false);
     }
     
-    let [hrefCheck, setHrefCheck] = useState();
+    const listGithub = props.portfolioLi[props.idxProp].github;
 
     return (
         <div  className={`pageArea ${style.modal}`} >
@@ -22,6 +22,13 @@ const Modal = (props) => {
                     <div className={style.rightInner}>
                         <h3>{props.portfolioLi[props.idxProp].title}</h3>
                         <h4>{props.portfolioLi[props.idxProp].skill}</h4>
+                        <a className={style.linkTxt} href={props.portfolioLi[props.idxProp].link} target="_blank" >{props.portfolioLi[props.idxProp].link}</a>
+                        {listGithub ? 
+                        <div className={style.githubBox}>
+                            <img src="/github2.png"/>
+                            <a href={listGithub} target="_blank" >{listGithub}</a>
+                        </div> 
+                        : ''}
                         <p>{props.portfolioLi[props.idxProp].content}</p>
                     </div>
                 </div>
