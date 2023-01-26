@@ -29,7 +29,7 @@ header {
 /* 모바일 */
 @media screen and (max-width: 768px) {
     header {
-        padding: 1rem 2rem;
+        padding: 2rem;
         background-color:#fff;
     }
     .headerInner {
@@ -86,7 +86,7 @@ header {
         height: 100vh;
         padding: 5rem 2rem;
         right: 0;
-        top: 3.6rem;
+        top: 5.6rem;
     }
 
 }

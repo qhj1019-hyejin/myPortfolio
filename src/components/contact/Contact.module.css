@@ -81,8 +81,8 @@ input:-webkit-autofill:active {
     box-shadow: 0 0 0px 1000px #f3f3f3 inset;
 }
 
-/* 태블릿 */
-@media screen and (max-width: 1080px) {
+/* 웹 반응형 */
+@media screen and (max-width: 1350px) {
     .contact form input {
         width: 100%;
     }

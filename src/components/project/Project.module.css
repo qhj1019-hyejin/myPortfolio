@@ -84,6 +84,13 @@
     }
 }
 
+/* 웹 반응형 */
+@media screen and (max-width: 1350px) {
+    .swiperSlide {
+        width: 40% !important;
+    }
+}
+
 /* 모바일 */
 @media screen and (max-width: 768px) {
     .project {
