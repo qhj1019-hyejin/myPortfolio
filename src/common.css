@@ -49,14 +49,10 @@
     display: none;
 }
 
-/* mobile header box shadow toggle */
-.shadowOn {
-    box-shadow: 2px 0px 5px grey;
+/* header menu navLink click event */
+.navLinkActive {
+    color:var(--main-color);
 }
-.shadowOff {
-    box-shadow: none;
-}
-
 
 /* header mobile menu off */
 .mobileMenuOff span:nth-of-type(1) {
@@ -76,6 +72,36 @@
     transform: translateY(-3px) rotate(45deg);
 }
 
+/* header mobile menu slide */
+.showMenu {
+    animation: mobileMenu-fadeIn .4s ease;
+}
+
+.hideMenu {
+    animation: mobileMenu-fadeOut .4s ease;
+}
+
+@keyframes mobileMenu-fadeIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes mobileMenu-fadeOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
 
 /* 태블릿 */
 @media screen and (max-width: 1080px) {

@@ -9,6 +9,9 @@ const Main = (props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{
+                duration: 0.5,
+            }}
             className={`pageArea ${style.main}` }
         >
             <div className={style.mainTxt}>

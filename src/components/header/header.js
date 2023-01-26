@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from './Header.module.css';
 import MobileMenu from "./mobileMenu";
 import { useState,useEffect } from "react";
@@ -8,6 +8,11 @@ const Header = (props) => {
 
   const [mobileMenu, setMobileMenu] = useState(false);  // 모바일 메뉴 초기값 false
   const { pathname } = useLocation();
+
+  // navLink active style
+  const activeStyle= {
+      color: 'var(--main-color)'
+  }
 
   // url 변경 시 모바일 메뉴 닫기
   useEffect(() => {
@@ -19,15 +24,43 @@ const Header = (props) => {
   }
 
   return (
-      <header className={mobileMenu ? "shadowOn" : "shadowOff"} >
+      <header>
         <div className={style.headerInner}>
-          <h1><Link to="/">I'm hyejin</Link></h1>
+          <h1><NavLink to="/">I'm hyejin</NavLink></h1>
             <nav className="pc">
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/project">Project</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li>
+                  <NavLink to="/" 
+                    style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }>
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about" 
+                    style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }>
+                    About
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/project" 
+                    style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }>
+                    Project
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact" 
+                    style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }>
+                    Contact
+                  </NavLink>
+                </li>
               </ul>
             </nav>
             <div className={`mobile ${style.menu} ${mobileMenu ? "mobileMenuOff" : ""} `} onClick={()=>toggleMenu()} >
