@@ -14,7 +14,7 @@ const Contact = (props) => {
     const sendEmail = (e) => {
     //   e.preventDefault();
   
-      emailjs.sendForm('service_2rb868j', 'template_l8odtoi', form.current, 'AxBNdASCBrusPDrKr')
+    emailjs.sendForm('service_2rb868j', 'template_l8odtoi', form.current, 'AxBNdASCBrusPDrKr')
         .then((result) => {
             alert('전송 되었습니다.');
         }, (error) => {
@@ -76,11 +76,11 @@ const Contact = (props) => {
                         placeholder="Email"
                         aria-invalid={!isDirty ? undefined : errors.email ? "true" : "false"}
                         {...register("email", {
-                          required: "이메일은 필수 입력값 입니다.",
-                          pattern: {
+                            required: "이메일은 필수 입력값 입니다.",
+                            pattern: {
                             value: /\S+@\S+\.\S+/,
                             message: "이메일 형식에 맞지 않습니다.",
-                          },
+                        },
                         })}
                     />
                     <textarea 

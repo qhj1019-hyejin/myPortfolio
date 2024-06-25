@@ -6,6 +6,7 @@
     height: 20rem;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 50%;
     margin: 0 auto 3rem;
 }
@@ -71,6 +72,9 @@
     line-height: 1.8;
     font-family: 'S-CoreDream-3Light';
     color: #333;
+}
+.aboutTxt b {
+    font-weight: 600;
 }
 
 /* 웹 반응형 */

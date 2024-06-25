@@ -51,8 +51,9 @@ const Project = (props) => {
             slidesPerView={"auto"}
                 spaceBetween={30}
                 pagination={{
-                  clickable: true,
+                    clickable: true,
                 }}
+                autoplay={{ delay: 2000, disableOnInteraction: false }}
                 modules={[Pagination]}
                 className={style.swiper}
             >
@@ -67,9 +68,9 @@ const Project = (props) => {
                 ))}
             </Swiper>
 
-             {
+            {
                 modalOpen == true ? <Modal setModalOpen={setModalOpen} portfolioLi={portfolioLi} idxProp={idxProp} /> : null // 모달 팝업
-             }      
+            }      
 
         </motion.div>
     )

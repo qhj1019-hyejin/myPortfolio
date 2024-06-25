@@ -22,7 +22,7 @@ const Main = (props) => {
                             typewriter
                             .typeString('안녕하세요.')
                             .pauseFor(100)
-                            .typeString('<br/>신입 웹 개발자 &nbsp;')
+                            .typeString('<br/>웹 개발자 &nbsp;')
                             .pauseFor(100)
                             .typeString('<b>박혜진</b> 입니다.')
                             .start()
@@ -31,8 +31,8 @@ const Main = (props) => {
                     />
                 </h2>
                 <h3>
-                    "성공이라는 못을 박으려면 끈질김이라는 망치가 필요하다"<br className="pc"/>
-                    저의 장점은 꾸준함과 차분함 입니다. 꾸준히 노력하는 개발자가 되겠습니다.
+                    저의 강점은 꾸준함과 새로운 도전에 두려움이 없는 것 입니다.<br />
+                    꾸준히 노력하는 개발자가 되겠습니다.
                 </h3>
                 <Link to="/about" className="pinkBtn">about Me</Link>
             </div>
@@ -44,7 +44,7 @@ const Main = (props) => {
                         duration: 1,
                     }}
                     className={style.mainImg}
-                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hyejin.jpg'})` }}
+                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/main-img.jpg'})` }}
                 />
                 <div className={style.imgModel}/>
             </div>

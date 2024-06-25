@@ -6,13 +6,17 @@ const About = (props) => {
 
     /* rightBox skills 리스트 */
     const [skill, setSkill] = useState([
-        { name: 'Html' , pct : '100' },
-        { name: 'Css' , pct : '95' },
-        { name: 'Javascript' , pct : '95' },
-        { name: 'Jquery' , pct : '100' },
-        { name: 'Php' , pct : '95' },
-        { name: 'Mysql' , pct : '90' },
-        { name: 'React.js' , pct : '80' }
+        { name: 'HTML' , pct : '100' },
+        { name: 'CSS' , pct : '100' },
+        { name: 'JavaScript' , pct : '95' },
+        { name: 'jQuery' , pct : '100' },
+        { name: 'React' , pct : '80' },
+        { name: 'Java' , pct : '30' },
+        { name: 'Node.js' , pct : '40' },
+        { name: 'PHP' , pct : '95' },
+        { name: 'MySQL' , pct : '90' },
+        { name: 'MSSQL' , pct : '70' },
+        
     ])
 
     const skillList = skill.map(e => (
@@ -44,7 +48,7 @@ const About = (props) => {
                         ease: [0, 0.71, 0.2, 1.01]
                     }}
                     className={style.aboutImg} 
-                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hyejin_2.jpg'})` }}
+                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/about-img.jpg'})` }}
                 />
                 <ul className={style.aboutList}>
                     <li>
@@ -72,11 +76,11 @@ const About = (props) => {
                 </ul>
             </div>
             <div className={style.aboutTxt}>
-                스킬 90% 이상은 실무에서 사용해봤기 때문에 어느정도 자신있게 할 수 있다고 생각 합니다.
-                react.js는 실무에서는 사용해보지 않았지만 독학으로 공부하고 프로젝트 등을 만들어 봤기 때문에 70%로 정했었습니다.
-                80%로 변경한 이유는 지금 보시고 계시는 포트폴리오를 react.js로 작업하면서 더 많은것을 찾아보고 배우게 되어서 조금 더 실무에서
-                사용할 때 도움되는 공부를 했다고 생각해서 높혔습니다.<br/>
-                적응력과 이해력이 높은 편이여서 처음 공부해보는 스킬도 곧잘 익혀서 실무에서 빠르게 사용합니다. 
+                3년간 프론트 개발 경험을 통해 웹 페이지 디자인과 기능 구현에 큰 성취감과 재미를 느꼈습니다.
+                업무를 수행하면서 SQL을 다루고 데이터 통신하는 작업들을 접하게 되면서 직접 데이터와 로직을 다루는 백엔드 개발에 대한 깊은 관심과 도전 의지를 키웠습니다.<br/>
+                <br/>
+                저는 강한 의지력과 꾸준한 노력으로 새로운 기술을 습득하고 성장하는 능력을 갖추고 있습니다. 
+                <b> 새로운 기술에 대한 열정과 적극적인 학습 태도를 가지고 있으며, 빠르게 성장하여 팀에 기여할 수 있는 백엔드 개발자가 될 수 있다고 자신 합니다.</b>
             </div>
         </motion.div>
     )

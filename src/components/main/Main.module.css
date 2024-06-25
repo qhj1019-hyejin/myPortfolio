@@ -26,12 +26,13 @@
     border-radius: 89% 11% 23% 77% / 76% 30% 70% 24%;
 }
 .mainImg {
-    /* background-image: url(../../public/img/hyejin.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+
 }
 .imgModel {
-    background-color:#FEF7F7;
+    background-color: #f5efef;
     position: absolute;
     left: 10%;
     top: 6%;
