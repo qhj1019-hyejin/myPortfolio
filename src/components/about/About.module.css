@@ -55,6 +55,7 @@
     height: 0.7rem;
     margin-top: 0.7rem;
     -webkit-appearance: none;
+    appearance: none;
 }
 .rightBox progress::-webkit-progress-bar {
     background-color: rgb(233, 233, 233);
